@@ -8,7 +8,7 @@ class LoaderService {
     this.state = this.loading.show()
     return
   }
-
+ 
   hide () {
     console.log(1)
     return this.state.hide()
