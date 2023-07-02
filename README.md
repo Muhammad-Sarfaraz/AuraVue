@@ -1,28 +1,27 @@
-# vue-boilerplate
+<p align="center">
+    <img height="250px" width="250px" src="https://i.ibb.co/dPXcLRL/Screenshot-2023-07-02-230712.png">
+</p>
 
-This template should help get you started developing with Vue 3 in Vite.
+# 🌈 Introduction
+Aura Vue is a Vue boilerplate that offers a well-structured foundation with pre-configured dependencies and tools to accelerate Vue development.
 
-## Recommended IDE Setup
-
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur) + [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin).
-
-## Customize configuration
+## 📔 Customize configuration
 
 See [Vite Configuration Reference](https://vitejs.dev/config/).
 
-## Project Setup
+- Project Setup
 
 ```sh
 npm install
 ```
 
-### Compile and Hot-Reload for Development
+- Compile and Hot-Reload for Development
 
 ```sh
 npm run dev
 ```
 
-### Compile and Minify for Production
+- Compile and Minify for Production
 
 ```sh
 npm run build
