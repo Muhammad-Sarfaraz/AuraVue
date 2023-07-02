@@ -31,6 +31,7 @@ import { mapState, mapGetters, mapMutations } from 'vuex';
 import NotificationService from '@/services/notification.service';
 import LoaderService from '@/services/loader.service';
 import master from './layout/master.vue';
+import HttpAdapter from '@/services/adapters/http.adapter';
 
 export default {
   components: {
@@ -39,11 +40,17 @@ export default {
   computed: {
     ...mapState('about', ['data']),
     ...mapGetters('about', ['getTitle']),
+    http(){
+      const adapter = new HttpAdapter(this.$Progress);
+      return adapter.http();
+    },
+    loader(){
+      return new LoaderService(this.$loading);
+    }
   },
 
   data() {
     return {
-      loader: new LoaderService(this.$loading),
     }
   },
 
@@ -55,6 +62,8 @@ export default {
   },
 
   created() {
+
+    this.http.get('https://jsonplaceholder.typicode.com/todos/1')
 
     // VueX
     this.$store.dispatch('about/getTitle')
@@ -76,7 +85,7 @@ export default {
     // Progressbar...
     this.$Progress.start()
 
-    fetch('http://api.rottentomatoes.com/api/public/v1.0/lists/movies/in_theaters.json?apikey=7waqfqbprs7pajbz28mqf6vz')
+    fetch('https://jsonplaceholder.typicode.com/todos/1')
       .then((response) => {
         this.$Progress.finish()
       }, (response) => {

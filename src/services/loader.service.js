@@ -1,3 +1,5 @@
+import Vue from 'vue';
+
 class LoaderService {
   constructor (loading) {
     this.loading = loading
