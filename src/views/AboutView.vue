@@ -63,9 +63,13 @@ export default {
 
   created() {
 
+    // Custom Plugins...
+    console.log(this.$world.execute());
+
+    // Http...
     this.http.get('https://jsonplaceholder.typicode.com/todos/1')
 
-    // VueX
+    // VueX...
     this.$store.dispatch('about/getTitle')
 
     // Show Loader...
